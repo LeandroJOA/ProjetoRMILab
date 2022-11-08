@@ -6,14 +6,6 @@ import java.rmi.server.*;
 
 class ContaImpl extends UnicastRemoteObject implements Conta {
 
-//	public ContaImpl() throws RemoteException {
-//		super();
-//	}
-
-//	public String echo(String input) throws RemoteException {
-//		return "From server: " + input;
-//	}
-
     private int numero;
     private double saldo = 0.0;
 
@@ -32,8 +24,13 @@ class ContaImpl extends UnicastRemoteObject implements Conta {
         saldo = s;
     }
 
+<<<<<<< HEAD
     public static void main(String[] args) throws RemoteException, MalformedURLException {
         Registry registry = LocateRegistry.createRegistry(5000);
+=======
+    public static void main(String[] args) throws RemoteException {
+        Registry registry = LocateRegistry.createRegistry(5099);
+>>>>>>> leandro
         registry.rebind("Conta804", new ContaImpl(804));
         System.out.println("Servidor ativo!");
     }
