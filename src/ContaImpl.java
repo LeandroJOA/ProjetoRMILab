@@ -33,7 +33,7 @@ class ContaImpl extends UnicastRemoteObject implements Conta {
     }
 
     public static void main(String[] args) throws RemoteException, MalformedURLException {
-        Registry registry = LocateRegistry.createRegistry(5099);
+        Registry registry = LocateRegistry.createRegistry(5000);
         registry.rebind("Conta804", new ContaImpl(804));
         System.out.println("Servidor ativo!");
     }
